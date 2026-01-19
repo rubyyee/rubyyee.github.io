@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="homepage-container">
+
+  <!-- Hero section -->
+  <section class="hero" id="hero">
+    <div class="container"> <!-- match navbar container width -->
+      <img src="/images/banner.jpg" alt="Banner" class="hero-image">
+    </div>
+  </section>
+
+  <!-- Page content -->
+  <div class="page-content">
+    {{ .Content }}
+  </div>
+
+</div>
+{{ end }}
+

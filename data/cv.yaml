@@ -1,0 +1,83 @@
+education:
+  - title: "PhD in Oceanography (transferred from MSc Sep 2022)"
+    institution: "Dalhousie University, Halifax, NS"
+    dates: "2021 — Present"
+    summary: "Thesis on turbulent mixing in the Arctic Ocean and Bedford Basin."
+    details:
+      - "**Research:** Ocean Alkalinity Enhancement (OAE) and turbulent mixing."
+      - "**Advisor:** Dr. Ruth Musgrave"
+      - "**GPA:** 4.15 on a 4.3-point scale"
+
+  - title: "HBSc in Integrated Science (Physics concentration)"
+    institution: "McMaster University, Hamilton, ON"
+    dates: "2016 — 2020"
+    summary: "Interdisciplinary physics and environmental science education."
+    details:
+      - "**Focus:** Physics, Mathematics, Earth and Environmental Science."
+      - "**GPA:** 11.62 on a 12-point scale"
+
+research:
+  - title: "Lead Researcher: Tufts Cove Dye Tracer Study"
+    institution: "Dalhousie University, Halifax, NS"
+    dates: "2023 — 2024"
+    summary: "Dye tracer experiments to quantify near-field plumes."
+    details:
+      - "Designed and executed near-field plume experiments in a tidal estuary."
+      - "Managed field data collection and analyzed turbulent mixing parameters."
+      - "*Key Output:* Developed models for lateral dilution for Ocean Alkalinity Enhancement (OAE)."
+
+  - title: "Research Assistant: Canada Basin Turbulence"
+    institution: "Dalhousie University, Halifax, NS"
+    dates: "2020"
+    summary: "Analysis of Arctic Ocean microstructure data."
+    details:
+      - "Evaluated and modified methods for Arctic ocean turbulence estimation in MATLAB."
+      - "Used spectral analysis of temperature profile data to perform turbulence estimates."
+
+  - title: "Honours Researcher: Gravity Fingering"
+    institution: "McMaster University, Hamilton, ON"
+    dates: "2019 — 2020"
+    summary: "Pore-scale physics of water infiltration in porous media."
+    details:
+      - "Studied preferential flow channels and instabilities at multiphase fluid interfaces."
+      - "Fabricated microfluidic cells for experimental design and image analysis."
+
+employment:
+  - title: "Teaching Assistant, Ocean Science"
+    institution: "Dalhousie University"
+    dates: "2021 — 2024"
+    details:
+      - "Led tutorials focusing on science writing, literacy, and peer review for 20 students."
+
+  - title: "Inshore Rescue Boat Coxswain"
+    institution: "Canadian Coast Guard"
+    dates: "2019"
+    details:
+      - "Leader of a three-person marine search and rescue crew on Lake Erie."
+      - "Primary decision-maker for medical and maritime emergencies."
+
+publications:
+  - "**R. Yee**, R. Musgrave, J. Nash, L. St. Laurent, E. Fine, R. Pickart. 2024. “Diffusivity profiles inferred from temperature microstructure at the southern edge of the Canada Basin”. *Journal of Geophysical Research*. 129(3)."
+  - "D. Kelley, C. Richards, **R. Yee**, A. Hay, K. Klingbeil, P. MacAulay, R. Musgrave. 2025. “Two-hour sea level oscillations in Halifax Harbour”. *Journal of Marine Science and Engineering*. 13(7)."
+
+presentations:
+  - "**R. Yee**. “Capture ocean physics in models for quantifying marine CDR”. Oral presentation: Liège Colloquium. 2025."
+  - "**R. Yee**, R. Musgrave, D. Atamanchuk, M. Dever. “We’re dyeing to characterize mixing in Halifax Harbour!”. Poster: Ocean Mixing GRC. 2024."
+  - "**R. Yee** et al. “Turbulent diffusivity profiles inferred from temperature microstructure...”. Oral presentation: Ocean Sciences Meeting. 2024."
+
+awards:
+  - "Mitacs Globalink Research Award (2024)"
+  - "NSERC Postgraduate Scholarship - Doctoral (2024-2027)"
+  - "Keith Thompson Memorial Prize (2023)"
+  - "Nova Scotia Graduate Scholarship (2021-2022)"
+
+skills:
+  - "**Modeling:** MITgcm, OpenFOAM, MATLAB"
+  - "**Field Work:** CTD Profiling, Microstructure Probes, Boat Operations"
+  - "**Languages:** Python (NumPy, SciPy, Xarray), R, LaTeX"
+
+certifications:
+  - "Commercial marine radio operation (ROC-MC)"
+  - "Marine Emergency Duties (MED) A3"
+  - "Small Vessel Operator Proficiency (SVOP)"
+  - "WHMIS 2015 for Managers and Supervisors"

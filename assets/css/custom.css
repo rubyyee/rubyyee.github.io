@@ -1,0 +1,166 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', serif;
+}
+
+/* Navbar standard styling */ 
+.navbar {
+  position: relative;
+  width: 100%;
+  left: auto;
+  right: auto;
+  background-color: var(--color-background, #fff);
+  z-index: 1000;
+  margin: 0;
+  padding: 0;
+}
+
+/* Force logo visibility */
+.navbar-logo {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.logo-text {
+  display: inline-block !important;
+}
+
+/* Keep navbar content centered and aligned */
+.navbar .container {
+  max-width: 1000px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Banner image standard styling */
+.hero {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Banner image content: Optional for centering */
+.hero img {
+  width: 98.5%;
+  height: auto;
+  display: block;
+}
+
+/* Adjust overall container alignment and add margin for content */
+.container {
+    max-width: 1100px; /* Reduced width to create white space */
+    padding: 0 25px;   /* Horizontal padding for left and right white space */
+    margin: 0 auto;    /* Center the container horizontally */
+}
+
+body {
+}
+
+/* CV Professional Styling */
+.cv-container {
+    max-width: 850px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.cv-container h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-primary, #297d7a);
+    border-bottom: 1px solid var(--color-line, #333);
+    padding-bottom: 5px;
+    margin-top: 40px;
+    font-size: 1.5rem;
+}
+
+.cv-container h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.cv-container h3 span.cv-date {
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    color: var(--color-primary, #297d7a);
+}
+
+.cv-container h4 {
+    color: var(--color-text, #666);
+    opacity: 0.8;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.cv-item {
+    border-left: 2px solid var(--color-line, #eee);
+    padding-left: 25px;
+    margin-left: 5px;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.cv-container ul {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.cv-container li {
+    margin-bottom: 6px;
+}
+
+/* Toggle Styling */
+.cv-toggle {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cv-toggle button { 
+    background: var(--color-background, #fff); 
+    border: 1px solid var(--color-line, #ccc); 
+    color: var(--color-text, #333); 
+    padding: 6px 14px; 
+    cursor: pointer; 
+    transition: 0.2s;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+}
+
+.cv-toggle button.active { 
+    background: var(--color-primary, #297d7a); 
+    color: #fff; 
+    border-color: var(--color-primary, #297d7a);
+    font-weight: bold; 
+}
+
+/* Print Styling */
+@media print {
+    body { background: white !important; color: black !important; padding: 0 !important; }
+    .cv-container { max-width: 100% !important; margin: 0 !important; }
+    .cv-toggle, .map-nav, .nav-header, .pre-footer-contact, .site-footer, #back-to-top { display: none !important; }
+    .cv-container h2 { border-bottom: 2px solid #000 !important; color: black !important; }
+    .cv-container h3 span.cv-date { color: black !important; }
+    .cv-container h4 { color: #333 !important; }
+    .cv-item { border-left: 1px solid #ccc !important; }
+    .full-view-section, .full-view { display: block !important; }
+    .tldr-view { display: none !important; }
+}

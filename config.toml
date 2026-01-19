@@ -1,0 +1,53 @@
+baseURL = "https://yourdomain.com/"
+title = "Ruby Yee"
+languageCode = "en-us"
+copyright = "Ruby Yee" # Footer copyright.
+theme = "vortisil"
+pagination.pagerSize = 9
+hasCJKLanguage = true
+enableEmoji = true
+disableKinds = ["taxonomy","term"] # DO NOT MODIFY
+
+
+[params]
+#  banner = "/images/banner.jpg"         # Used on homepage as main banner image
+  author = "Ruby Yee"
+  description = "Ruby Yee's academic website."
+  customCSS = ["css/custom.css"]
+
+[menu]
+
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 0
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "cv"
+    name = "CV"
+    url = "/cv/"
+    weight = 3
+
+
+[debug]
+printTemplateStats = true
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+

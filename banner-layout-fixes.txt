@@ -1,0 +1,124 @@
+BANNER LAYOUT FIXES - DOCUMENTATION
+====================================
+
+Date: 2026-01-17
+Hugo Site: Ruby Yee Academic Website
+
+ORIGINAL PROBLEM:
+-----------------
+The homepage banner (banner.jpg) had visible white space (borders) on all sides and was not
+aligned with the text content below it. Grey lines appeared above and below the banner.
+
+ROOT CAUSES IDENTIFIED:
+-----------------------
+
+1. BODY ELEMENT CONSTRAINT
+   - The Vortisil theme CSS set: body { max-width: 46rem; margin: 0 auto; padding: 0 1rem; }
+   - This restricted the entire page to 736px width, creating white space on wider screens
+
+2. CONTAINER PADDING
+   - The .container class had padding: 0 1.25rem (20px on each side)
+   - This padding was applied to the hero section's container, creating left/right white space
+
+3. HEADER BORDER
+   - The header element had: border-bottom: 1px solid rgba(255,255,255,.1)
+   - This created a grey line between the navigation and banner
+
+4. HERO SECTION STYLING
+   - The .hero class had: box-shadow: 0 0 5px var(--color-shadow) and border-radius: 5px
+   - These created grey shadow lines and rounded corners around the banner
+
+SOLUTION IMPLEMENTED:
+---------------------
+
+All changes were made to: /static/css/custom.css
+
+CHANGE 1: Remove header border (Line 1-4)
+------------------------------------------
+/* Remove header border to eliminate grey line above banner */
+header {
+  border-bottom: none !important;
+}
+
+Purpose: Eliminates the grey line that appeared between the navigation menu and banner
+
+
+CHANGE 2: Remove hero container padding (Line 39-43)
+-----------------------------------------------------
+/* Remove padding from container inside hero section to eliminate white space */
+.hero .container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+Purpose: Removes left/right padding from the banner's container so it fills the full width
+
+
+CHANGE 3: Remove hero styling artifacts (Line 45-51)
+-----------------------------------------------------
+.hero {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+Purpose: Removes the box shadow and border radius that created grey lines and rounded corners
+
+
+CHANGE 4: Ensure banner image fills container (Line 67-77)
+-----------------------------------------------------------
+/* Ensure banner image fills container completely */
+.hero-image {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 !important;
+}
+
+Purpose: Forces the banner image to fill 100% of its container and removes any border radius
+
+
+CHANGE 5: Override body max-width constraint (Line 87-91)
+----------------------------------------------------------
+/* Override theme's body max-width constraint to allow full-width content */
+body {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+Purpose: Removes the theme's 46rem (736px) width restriction, allowing content to use full width
+
+
+FINAL RESULT:
+-------------
+✓ Banner image fills its container edge-to-edge (no white space borders)
+✓ Banner edges align exactly with the "Hello! I'm a..." text below
+✓ Both banner and text are constrained to max-width: 62.5rem (1000px) with matching padding
+✓ No grey lines above or below the banner
+✓ Clean, professional appearance with proper alignment
+
+TECHNICAL NOTES:
+----------------
+- The banner source file is: /static/images/banner.jpg
+- Hugo copies static files to /public/ during build
+- The !important flags ensure these custom styles override the theme's defaults
+- Both containers maintain max-width: 62.5rem for consistent layout
+- Text content has padding: 0 1.25rem (20px) for proper inset from banner edges
+
+FILES MODIFIED:
+---------------
+1. /static/css/custom.css - All CSS changes applied here
+
+TO TEST CHANGES:
+----------------
+1. Rebuild Hugo site: hugo
+2. Or use dev server: hugo server
+3. Hard refresh browser: Ctrl+Shift+R (Windows) or Cmd+Shift+R (Mac)
+4. Verify banner fills container with no grey lines or white space
+5. Verify text alignment matches banner edges (both inset 20px from max-width)
