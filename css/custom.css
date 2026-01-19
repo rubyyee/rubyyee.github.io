@@ -1,0 +1,454 @@
+/* Remove header border to eliminate grey line above banner */
+header {
+  border-bottom: none !important;
+}
+
+/* Navbar wrapper - full width background */
+.navbar {
+  position: relative;
+  width: 100%;
+  background-color: inherit;
+}
+
+/* Navbar content container - constrained width */
+.navbar .container {
+  max-width: 62.5rem;
+  padding: 0 1.25rem !important;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Ensure navbar itself has padding if no container */
+header.navbar {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+/* Inner navbar element */
+nav.navbar {
+  width: 100%;
+  max-width: 62.5rem;
+  margin: 0 auto;
+}
+
+/* Adjust navbar alignment on single pages and section pages to match page titles */
+body.page-page nav.navbar,
+body.page-section nav.navbar {
+  max-width: 62.5rem;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1.25rem;
+}
+
+body.page-page header,
+body.page-section header {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Align home page navbar with banner left edge */
+body.page-home header {
+  padding-left: 0;
+  padding-right: 1.25rem;
+}
+
+/* Banner image styling */
+.hero-container {
+  max-width: 62.5rem;  /* same as navbar container */
+  margin: 0 auto;       /* center it */
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Remove padding from container inside hero section to eliminate white space */
+.hero .container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.hero {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Banner image content - scales with zoom */
+.hero img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Ensure banner image fills container completely */
+.hero-image {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 !important;
+}
+
+/* Adjust overall container alignment and add margin for content */
+.container {
+    max-width: 62.5rem; /* 1000px at 16px - match navbar */
+    padding: 0 1.25rem;   /* 20px at 16px - match navbar */
+    margin: 0 auto;
+}
+
+
+/* Reset html and body for proper zoom behavior */
+html, body {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  /* Removed overflow-x: hidden - it breaks zoom */
+}
+
+/* Override theme's body max-width constraint to allow full-width content */
+body {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+
+/* Flexbox container */
+.text-image-container {
+  display: flex;               /* Align text and image horizontally */
+  justify-content: flex-start; /* Ensure alignment at the start */
+  align-items: flex-start;     /* Align items to the top */
+  gap: 2.5rem;                 /* Add space between text and image */
+  margin-bottom: 4rem;         /* Add more space between project sections */
+  max-width: 62.5rem;          /* Match navbar width */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;                  /* Remove horizontal padding to align with page title */
+}
+
+/* Text styling */
+.text {
+  flex: 1;                      /* Allow text to take up the remaining space */
+  padding-right: 0;             /* Remove extra padding */
+}
+
+/* Remove top margin from h2 to align with images */
+.text-image-container .text h2:first-child {
+  margin-top: 0;
+}
+
+/* Image styling */
+.image {
+  flex-shrink: 0;               /* Prevent the image from shrinking */
+}
+
+.image img {
+  max-width: 100%;              /* Ensure the image is responsive */
+  height: auto;                 /* Maintain aspect ratio */
+  max-width: 500px;             /* Limit the image width (you can adjust as needed) */
+}
+
+/* Projects page: media wrapper for images/videos */
+.project-media {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 450px;
+  max-width: 450px;
+  margin-top: 0.15rem;  /* Align with h2 baseline */
+}
+
+/* Projects page: figure containers */
+.project-media figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Projects page: images and videos */
+.project-media img,
+.project-media video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Projects page: ensure captions align left under media */
+.project-media .image-caption {
+  text-align: left;
+  margin: 0.5rem 0 0 0;
+  padding: 0;
+}
+
+/* Projects and Fieldwork side-by-side layout */
+.projects-fieldwork-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.5rem;
+  max-width: 62.5rem;             /* 1000px - match navbar */
+  margin: 2rem auto;
+  padding: 0 1.25rem;
+}
+
+.projects-list {
+  flex: 1;
+  min-width: 0;
+}
+
+.projects-list h3 {
+  margin-top: 0;
+}
+
+.fieldwork-image-wrapper {
+  flex-shrink: 0;
+  width: 450px;                   /* Increased from 350px */
+  max-width: 450px;
+  margin-top: 1.5rem;             /* Move down one line */
+}
+
+.fieldwork-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.image-caption {
+  margin-top: 0.5rem;
+  font-style: italic;
+  font-size: 0.9rem;
+  text-align: left;
+  line-height: 1.4;
+}
+
+/* Light mode - darker caption */
+[data-theme="light"] .image-caption {
+  color: #555;
+}
+
+/* Dark mode - lighter caption */
+[data-theme="dark"] .image-caption {
+  color: #bbb;
+}
+
+.right-image {
+  float: right;
+  margin-left: 20px;   /* Add some space between the text and image */
+  margin-bottom: 20px; /* Space below the image */
+  width: 500px;        /* Set a fixed width if needed */
+}
+
+
+
+/* Two-column layout for About page */
+.about-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.about-text p:first-child {
+  margin-top: 0;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-image {
+  margin-top: 0.5cm;
+}
+
+.about-image img {
+  max-width: 300px;
+  height: auto;
+  display: block;
+}
+
+
+
+/* Tablet: reduce image size slightly */
+@media (max-width: 992px) and (min-width: 769px) {
+  .fieldwork-image-wrapper {
+    width: 380px;
+  }
+
+  .projects-fieldwork-container {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-layout {
+    flex-direction: column;
+  }
+
+  /* Stack projects and fieldwork on mobile */
+  .projects-fieldwork-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .fieldwork-image-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .fieldwork-img {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  .image-caption {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  /* Mobile: stack text and media vertically on projects page */
+  .text-image-container {
+    flex-direction: column;
+  }
+
+  .project-media {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+
+.centered-img {
+  display: block;
+  margin: 0 auto;   /* centres image horizontally */
+  max-width: 300px; /* sets width */
+  height: auto;     /* maintains aspect ratio */
+}
+
+.footer-banner {
+  text-align: center;
+  margin-top: 0.5rem; /* optional spacing from above */
+  margin-bottom: 0;   /* optional remove extra space */
+}
+
+.pre-footer-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.8rem;
+}
+
+.pre-footer-contact > * {
+  white-space: nowrap;
+}
+
+/* Footer container */
+.footer {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 4rem 1.25rem 2rem;
+}
+
+/* Center footer items when banner credit is hidden (non-homepage pages) */
+.footer-no-banner {
+  justify-content: center !important;
+  gap: 2rem;
+}
+
+/* Ensure footer spans have proper spacing when centered */
+.footer-no-banner span {
+  white-space: nowrap;
+}
+
+/* Wrap main content properly */
+main {
+  max-width: 100%;
+}
+
+/* Remove padding from main when it contains single-page-container */
+main:has(.single-page-container) {
+  padding: 0 !important;
+}
+
+/* Homepage content wrapper - children handle their own constraints */
+.page-content {
+  width: 100%;
+}
+
+/* Single page container - CV, Projects, etc. */
+.single-page-container {
+  max-width: 62.5rem;
+  margin: 0 auto;
+  padding: 0 1.25rem !important;
+  box-sizing: border-box;
+}
+
+/* Single page article */
+.single-page {
+  width: 100%;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Fix h1 when it's outside container (Projects page using theme template) */
+body > main > h1:first-child {
+  max-width: 62.5rem !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 1.25rem !important;
+  padding-right: 1.25rem !important;
+  box-sizing: border-box !important;
+}
+
+/* Page content within single pages */
+.single-page .page-content {
+  width: 100%;
+  padding: 0;
+}
+
+/* Ensure all content elements respect container padding */
+.single-page-container * {
+  box-sizing: border-box;
+}
+
+.navbar .search { display: none; }
+
+.social-link:hover {
+  color: var(--color-primary) !important;
+  border-bottom: none !important;
+}
+
+.figure {
+  display: table;
+  margin: 0 auto;      /* centers figure */
+}
+
+.figcaption {
+  text-align: center;  /* centers caption text */
+}
+
+.projects-link {
+font-size: 1.2rem;
+}
+
+/* Remove hash symbol from h2 on projects page */
+body .single-page-container h2::before,
+body .text-image-container h2::before,
+body main h2::before {
+  content: "" !important;
+  display: none !important;
+}
+
